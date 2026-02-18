@@ -28,7 +28,7 @@ app.post('/api/random', async (req, res) => {
 
     // Call the random number service
     // TODO: Update this URL to point to your actual randomnumberservice
-    const randomNumberServiceUrl = process.env.RANDOM_SERVICE_URL || 'http://randomnumberservice-hans.apps-crc.testing/random';
+    const randomNumberServiceUrl = process.env.RANDOM_SERVICE_URL || 'http://randomnumberservice:8080/random';
     
     const response = await axiosInstance.post(randomNumberServiceUrl, { "seed": seed });
     console.log(response.data)
